@@ -1,9 +1,9 @@
 {
-  "name": "node-definitions",
+  "name": "rindel-native-definitions",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "dynamic-runtime": "0.1.0"
+    "rindel-runtime": "0.1.0"
   }
 }

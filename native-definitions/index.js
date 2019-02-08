@@ -1,4 +1,4 @@
-import { nativeDefinitionHelpers } from 'dynamic-runtime';
+import { nativeDefinitionHelpers } from 'rindel-runtime';
 
 const {buildConstant, buildPointwiseUnary, buildPointwiseBinary, buildSink} = nativeDefinitionHelpers;
 

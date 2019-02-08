@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Map as IMap, Record } from 'immutable';
 
-import { createRootUserClosure } from 'dynamic-runtime';
+import { createRootUserClosure } from 'rindel-runtime';
 import './Patcher.css';
 import CreateNodeBox from './CreateNodeBox';
 import FlashMessage from './FlashMessage';

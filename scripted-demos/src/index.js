@@ -1,4 +1,4 @@
-import * as runtime from 'dynamic-runtime';
+import * as runtime from 'rindel-runtime';
 import programs from './programs';
 
 const programListElem = document.getElementById('program-list');

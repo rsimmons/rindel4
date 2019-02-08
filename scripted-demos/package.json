@@ -1,5 +1,5 @@
 {
-  "name": "scripted-demos",
+  "name": "rindel-scripted-demos",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -9,8 +9,8 @@
     "watch": "webpack --progress --colors --watch"
   },
   "dependencies": {
-    "dynamic-runtime": "0.1.0",
-    "node-definitions": "0.1.0"
+    "rindel-runtime": "0.1.0",
+    "rindel-native-definitions": "0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

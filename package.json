@@ -1,9 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "dynamic-runtime",
-    "patcher",
-    "node-definitions",
-    "scripted-demos"
+    "runtime",
+    "native-definitions"
   ]
 }

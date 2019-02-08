@@ -1,4 +1,4 @@
-import * as nodeDefs from 'node-definitions';
+import * as nodeDefs from 'rindel-native-definitions';
 import {fuzzy_match} from './vendor/fts_fuzzy_match';
 
 export default class NodePool {
