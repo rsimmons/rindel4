@@ -2,6 +2,7 @@
   "private": true,
   "workspaces": [
     "runtime",
-    "native-definitions"
+    "native-definitions",
+    "scripted-demos"
   ]
 }

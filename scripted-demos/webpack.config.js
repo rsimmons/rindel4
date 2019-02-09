@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
@@ -11,9 +11,18 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['babel-preset-env'].map(require.resolve), // needs this otherwise code loaded from other dirs will fail because it tries to load the preset relative to that other dir, not this one. fixed in upcoming babel 7
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: '> 2.5%',
+                },
+              ],
+            ],
+          },
         },
       },
     ],
