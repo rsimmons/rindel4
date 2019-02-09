@@ -3,15 +3,32 @@ import * as nodeDefs from 'rindel-native-definitions';
 export default [
   {
     name: 'follow mouse',
-    run: (runtime) => {
-      const closure = runtime.createRootUserClosure();
-      const def = closure.definition;
-      const mpId = def.addNativeApplication(nodeDefs.mousePos, new Map());
-      const rsId = def.addNativeApplication(nodeDefs.redCircle, new Map());
+    run: (def) => {
+      const mpId = def.addNativeApplication(nodeDefs.mousePos);
+      const rsId = def.addNativeApplication(nodeDefs.redCircle);
       def.addConnection(mpId.output, rsId.inputs[0]);
-      closure.activate();
     },
   },
+
+  {
+    name: 'show time',
+    run: (def) => {
+      const afId = def.addNativeApplication(nodeDefs.animationFrame);
+      const dasId = def.addNativeApplication(nodeDefs.displayAsString);
+      def.addConnection(afId.output.get('time'), dasId.inputs[0]);
+    },
+  },
+
+  {
+    name: 'show mouse down',
+    run: (def) => {
+      const mpId = def.addNativeApplication(nodeDefs.mouseDown);
+      const dasId = def.addNativeApplication(nodeDefs.displayAsString);
+      def.addConnection(mpId.output, dasId.inputs[0]);
+    },
+  },
+
+  //////////// NOT WORKING BELOW HERE
 
   {
     name: 'follow mouse with x/y swapped',
@@ -29,24 +46,6 @@ export default [
       const mpId = runtime.addNode(nodeDefs.mousePos);
       const ssId = runtime.addNode(nodeDefs.showString);
       runtime.addConnection(mpId, 'x', ssId, 'v');
-    },
-  },
-
-  {
-    name: 'show mouse down',
-    run: (runtime) => {
-      const mpId = runtime.addNode(nodeDefs.mouseDown);
-      const ssId = runtime.addNode(nodeDefs.showString);
-      runtime.addConnection(mpId, 'down', ssId, 'v');
-    },
-  },
-
-  {
-    name: 'show time',
-    run: (runtime) => {
-      const atId = runtime.addNode(nodeDefs.animationTime);
-      const ssId = runtime.addNode(nodeDefs.showString);
-      runtime.addConnection(atId, 'time', ssId, 'v');
     },
   },
 
