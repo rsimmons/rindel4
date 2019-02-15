@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2017", // targeting ES5 here messes up for..of iteration of Sets. maybe use Babel after TS if we want to target ES5?
+    "module": "ES6",
+    "outDir": "./lib",
+    // "declaration": true, // enable this once we no longer need allowJs
+    "sourceMap": true,
+
+    "moduleResolution": "node",
+    "allowJs": true,
+    "strict": true,
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
