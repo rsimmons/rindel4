@@ -10,8 +10,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "fastpriorityqueue": "^0.6.1",
-    "jest": "^24.1.0"
+    "fastpriorityqueue": "^0.6.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.5",
