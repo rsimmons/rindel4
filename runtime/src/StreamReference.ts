@@ -8,9 +8,7 @@ import UserFunctionDefinition from './UserFunctionDefinition';
  * of definition outputs.
  */
 export default class StreamReference {
-  target: StreamDefinition | null;
-
-  constructor(readonly containingFunctionDefinition: UserFunctionDefinition) {
+  constructor(readonly target: StreamDefinition | null, readonly containingFunctionDefinition: UserFunctionDefinition) {
   }
 
   assign(target: StreamDefinition | null) : void {

@@ -1,6 +1,8 @@
 import Activatable from './Activatable';
 import UserFunctionDefinition from './UserFunctionDefinition';
 import Resolver from './Resolver';
+import FunctionArguments from './FunctionArguments';
+import Activation from './Activation';
 
 /**
  * Note that this only implements Activatable, not FunctionDefinition, and the underlying
@@ -11,5 +13,7 @@ export default class BoundUserFunctionDefinition implements Activatable {
   constructor(private readonly userFunctionDefinition: UserFunctionDefinition, private readonly resolver: Resolver | null) {
   }
 
-  // TODO: implement Activatable
+  activate(requestUpdate: () => void, functionArguments: FunctionArguments): Activation {
+    return this.userFunctionDefinition.activateWithResolver(requestUpdate, functionArguments, this.resolver);
+  }
 }

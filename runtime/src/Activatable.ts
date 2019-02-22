@@ -1,4 +1,6 @@
 import FunctionDefinition from './FunctionDefinition';
+import FunctionArguments from './FunctionArguments';
+import Activation from './Activation';
 
 /**
  * Activatable is a function definition that can be activated. If a function definition references
@@ -8,6 +10,5 @@ import FunctionDefinition from './FunctionDefinition';
  * represents the activatable behavior.
  */
 export default interface Activatable {
-  // TODO: create an activation. need callback to request update, and function arguments
-  activate(requestUpdate, functionArguments);
+  activate(requestUpdate: () => void, functionArguments: FunctionArguments): Activation;
 }
