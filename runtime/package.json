@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest --watchAll",
     "watch": "tsc --watch",
-    "build": "tsc"
+    "build": "rm -rf lib/ && tsc"
   },
   "dependencies": {
     "fastpriorityqueue": "^0.6.1"
