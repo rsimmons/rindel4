@@ -229,9 +229,11 @@ export default class UserDefinition {
     return activation;
   }
 
+/* this appears to be unused?
   activateClosed(onOutputChange, functionArguments) {
     return this.activate(null, onOutputChange, functionArguments);
   }
+*/
 
   // Notify this definition that one of its activations has been deactivated
   activationDeactivated(activation) {
