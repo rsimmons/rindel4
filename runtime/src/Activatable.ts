@@ -1,6 +1,6 @@
-import FunctionDefinition from './FunctionDefinition';
-import FunctionArguments from './FunctionArguments';
 import Activation from './Activation';
+import FunctionArguments from './FunctionArguments';
+import FunctionDefinition from './FunctionDefinition';
 
 /**
  * Activatable is a function definition that can be activated. If a function definition references

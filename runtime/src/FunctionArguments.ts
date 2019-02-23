@@ -1,5 +1,5 @@
 import Activatable from './Activatable';
 
-export default interface FunctionArguments {
-  [name: string]: Activatable;
-}
+type FunctionArguments = Map<string, Activatable>;
+
+export default FunctionArguments;

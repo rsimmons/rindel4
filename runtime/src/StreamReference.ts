@@ -8,10 +8,18 @@ import UserFunctionDefinition from './UserFunctionDefinition';
  * of definition outputs.
  */
 export default class StreamReference {
-  constructor(readonly target: StreamDefinition | null, readonly containingFunctionDefinition: UserFunctionDefinition) {
+  target: StreamDefinition | null;
+  readonly owningDefinition: UserFunctionDefinition;
+
+  constructor(target: StreamDefinition | null, owningDefinition: UserFunctionDefinition) {
+    this.target = target;
+    this.owningDefinition = owningDefinition;
+
   }
 
   assign(target: StreamDefinition | null) : void {
-    // TODO: set, notify containingFunctionDefinition
+    // TODO: how do we validate the target? sorting aside. I guess we could ask the owning definition
+    this.target = target;
+    this.owningDefinition.changedReference();
   }
 }

@@ -1,8 +1,8 @@
 import Activatable from './Activatable';
-import UserFunctionDefinition from './UserFunctionDefinition';
-import Resolver from './Resolver';
-import FunctionArguments from './FunctionArguments';
 import Activation from './Activation';
+import FunctionArguments from './FunctionArguments';
+import Resolver from './Resolver';
+import UserFunctionDefinition from './UserFunctionDefinition';
 
 /**
  * Note that this only implements Activatable, not FunctionDefinition, and the underlying

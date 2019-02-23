@@ -56,7 +56,7 @@ export default class UserActivation {
     }
 
     // Activate native applications (which will create streams, pulling in initial values if any).
-    // This needs to be done in topological sort order, but we keep them ordered so it's easy. 
+    // This needs to be done in topological sort order, but we keep them ordered so it's easy.
     for (const napp of definition.nativeApplications) {
       this._activateNativeApplication(napp);
     }

@@ -1,7 +1,7 @@
-import UserFunctionDefinition from './UserFunctionDefinition';
+import Activatable from './Activatable';
 import BoundUserFunctionDefinition from './BoundUserFunctionDefinition';
 import FunctionSignature from './FunctionSignature';
-import Activatable from './Activatable';
+import UserFunctionDefinition from './UserFunctionDefinition';
 
 export function createRootUserFunctionDefinition(signature: FunctionSignature) : {functionDefinition: UserFunctionDefinition, activatable: Activatable} {
   const functionDefinition = new UserFunctionDefinition(null, signature);

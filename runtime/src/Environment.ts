@@ -1,6 +1,6 @@
-import StreamDefinition from './StreamDefinition';
 import Resolver from './Resolver';
 import Stream from './Stream';
+import StreamDefinition from './StreamDefinition';
 
 export class Environment implements Resolver {
   // TODO: our own local Map
